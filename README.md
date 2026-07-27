@@ -9,12 +9,11 @@
 <p align="center">
   <img src="./assets/readme/section-overview.svg" width="100%" alt="技能概览">
 </p>
-
 <table>
   <tr>
     <td align="center" width="50%">
       <h3>🎯 xr-goal</h3>
-      <p><strong>通用因果分解引擎</strong></p>
+      <p><strong>树形结构分解目标</strong></p>
       <p>从目标倒推必要条件，递归拆解直到下一步可执行</p>
       <p>
         <code>/xr-goal</code> &nbsp;
@@ -37,22 +36,18 @@
   </tr>
 </table>
 
+
 ---
 
 ## 🚀 安装
 
-两个技能通过 Claude Code 的 skills 机制注册。
-
 ```bash
-# 从 GitHub 克隆
-git clone https://github.com/xiran1984/xrskill.git ~/.claude/skills/xrskill
-
-# 或者手动复制 xr-goal 和 xr-survive-game 文件夹到 .claude/skills/ 目录
+https://github.com/xiran1984/xrskill 帮我安装这个
 ```
 
 ---
 
-## 🎯 xr-goal · 通用因果分解引擎
+## 🎯 xr-goal · 树形结构分解目标
 
 <p align="center">
   <img src="./assets/readme/section-xr-goal.svg" width="100%" alt="xr-goal 通用因果分解引擎">
@@ -183,8 +178,3 @@ xr-survive-game 基于生存与繁殖框架提供意义评估与行动建议，x
 
 如果你有持续的情绪困扰、抑郁症状或焦虑状态，请寻求专业帮助。
 
----
-
-## 📄 许可
-
-MIT
