@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="360" viewBox="0 0 1200 360"
+     role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">xrskill — Goal decomposition and survival-framework skills for Claude Code</title>
+  <desc id="hero-desc">Two Claude Code skills: xr-goal breaks any goal into a causal condition tree, xr-survive-game scans for false concepts and gives 5-minute micro-actions when stuck.</desc>
+
+  <defs>
+    <linearGradient id="accentLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#58a6ff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="treeEdge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#30363d"/>
+      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="360" rx="20" fill="#0d1117"/>
+
+  <!-- Subtle top rule -->
+  <rect x="56" y="0" width="1088" height="1" fill="url(#accentLine)" opacity="0.4"/>
+
+  <!-- Left: title block -->
+  <g id="title-block" transform="translate(56 52)">
+    <!-- Category label -->
+    <text x="0" y="28" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="18" fill="#8b949e" letter-spacing="2">CLAUDE CODE SKILLS</text>
+
+    <!-- Project name -->
+    <text x="0" y="82" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="64" font-weight="700" fill="#e6edf3" letter-spacing="-1">xrskill</text>
+
+    <!-- Concrete description -->
+    <text x="0" y="128" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="22" fill="#8b949e">
+      把模糊的目标和行动卡顿，拆成可执行、可验证的下一步
+    </text>
+
+    <!-- Secondary description -->
+    <text x="0" y="166" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="17" fill="#484f58">
+      Two skills — one causal decomposition engine, one survival-framework evaluator
+    </text>
+
+    <!-- Trigger badges -->
+    <g transform="translate(0 204)">
+      <rect x="0" y="0" width="140" height="32" rx="8" fill="#1c2128" stroke="#30363d" stroke-width="1"/>
+      <text x="70" y="21" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" fill="#58a6ff">/xr-goal</text>
+
+      <rect x="152" y="0" width="196" height="32" rx="8" fill="#1c2128" stroke="#30363d" stroke-width="1"/>
+      <text x="250" y="21" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" fill="#58a6ff">/xr-survive-game</text>
+    </g>
+  </g>
+
+  <!-- Right: abstract condition tree proof -->
+  <g id="project-proof" transform="translate(720 62)">
+    <!-- Tree: root node -->
+    <rect x="180" y="0" width="220" height="38" rx="8" fill="#1c2128" stroke="#30363d" stroke-width="1"/>
+    <text x="290" y="25" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#e6edf3">最终目标</text>
+
+    <!-- Branch lines from root -->
+    <line x1="290" y1="38" x2="290" y2="52" stroke="#30363d" stroke-width="1.5"/>
+    <line x1="80" y1="52" x2="500" y2="52" stroke="#30363d" stroke-width="1.5"/>
+    <line x1="80" y1="52" x2="80" y2="66" stroke="#30363d" stroke-width="1.5"/>
+    <line x1="210" y1="52" x2="210" y2="66" stroke="#30363d" stroke-width="1.5"/>
+    <line x1="370" y1="52" x2="370" y2="66" stroke="#30363d" stroke-width="1.5"/>
+    <line x1="500" y1="52" x2="500" y2="66" stroke="#30363d" stroke-width="1.5"/>
+
+    <!-- Level 2 nodes -->
+    <rect x="20" y="66" width="120" height="34" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <text x="80" y="88" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#c9d1d9">选方向</text>
+
+    <rect x="150" y="66" width="120" height="34" rx="6" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+    <text x="210" y="88" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#58a6ff">进入交易 ⚠</text>
+
+    <rect x="310" y="66" width="120" height="34" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <text x="370" y="88" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#c9d1d9">积累案例</text>
+
+    <rect x="440" y="66" width="120" height="34" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <text x="500" y="88" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#c9d1d9">防贬值</text>
+
+    <!-- Deep dive lines on the bottleneck (node 2) -->
+    <line x1="210" y1="100" x2="210" y2="114" stroke="#58a6ff" stroke-width="1" opacity="0.7"/>
+    <line x1="150" y1="114" x2="270" y2="114" stroke="#58a6ff" stroke-width="1" opacity="0.4"/>
+    <line x1="150" y1="114" x2="150" y2="128" stroke="#58a6ff" stroke-width="1" opacity="0.4"/>
+    <line x1="210" y1="114" x2="210" y2="128" stroke="#58a6ff" stroke-width="1" opacity="0.4"/>
+    <line x1="270" y1="114" x2="270" y2="128" stroke="#58a6ff" stroke-width="1" opacity="0.4"/>
+
+    <!-- Deep dive leaves -->
+    <rect x="105" y="128" width="90" height="30" rx="5" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="150" y="149" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#8b949e">找第一个客户</text>
+
+    <rect x="165" y="128" width="90" height="30" rx="5" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="210" y="149" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#8b949e">可低价交付</text>
+
+    <rect x="225" y="128" width="90" height="30" rx="5" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="270" y="149" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#8b949e">反馈迭代提价</text>
+
+    <!-- Five-question test (bottom right, small) -->
+    <g transform="translate(10 180)">
+      <rect x="0" y="0" width="510" height="30" rx="6" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
+      <text x="16" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#8b949e">
+        Q1: 投影测试    Q2: 手段-目的混淆    Q3: 信息差陷阱    Q4: 奖励回路    Q5: 替代性测试
+      </text>
+
+      <!-- Mini result indicators -->
+      <circle cx="122" cy="15" r="5" fill="#3fb950"/>
+      <circle cx="276" cy="15" r="5" fill="#f85149"/>
+      <circle cx="364" cy="15" r="5" fill="#f85149"/>
+      <circle cx="442" cy="15" r="5" fill="#f85149"/>
+      <circle cx="498" cy="15" r="5" fill="#f85149"/>
+    </g>
+  </g>
+</svg>

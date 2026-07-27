@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="400" viewBox="0 0 1200 400"
+     role="img" aria-labelledby="wf-title wf-desc">
+  <title id="wf-title">xrskill collaboration flow: scan then decompose</title>
+  <desc id="wf-desc">User goal → xr-survive-game 5-question scan → red/green light → xr-goal causal decomposition → executable next step</desc>
+
+  <defs>
+    <linearGradient id="wfBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="400" rx="20" fill="url(#wfBg)"/>
+
+  <!-- Node 1: User input -->
+  <g transform="translate(56 50)">
+    <rect x="0" y="0" width="210" height="64" rx="10" fill="#1c2128" stroke="#30363d" stroke-width="1"/>
+    <text x="105" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#8b949e">用户说</text>
+    <text x="105" y="48" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" fill="#e6edf3">「我想做个人 IP」</text>
+
+    <!-- Arrow 1→2 -->
+    <line x1="210" y1="32" x2="272" y2="32" stroke="#58a6ff" stroke-width="1.5" opacity="0.6"/>
+    <polygon points="268,27 278,32 268,37" fill="#58a6ff" opacity="0.6"/>
+  </g>
+
+  <!-- Node 2: xr-survive-game -->
+  <g transform="translate(290 50)">
+    <rect x="0" y="0" width="240" height="64" rx="10" fill="#1c2128" stroke="#58a6ff" stroke-width="1.2"/>
+    <text x="120" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#58a6ff">🦅 xr-survive-game</text>
+    <text x="120" y="48" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" fill="#e6edf3">五道测试 → 🔴 红灯</text>
+
+    <!-- Arrow 2→3 -->
+    <line x1="240" y1="32" x2="302" y2="32" stroke="#f85149" stroke-width="1.5" opacity="0.7"/>
+    <polygon points="298,27 308,32 298,37" fill="#f85149" opacity="0.7"/>
+  </g>
+
+  <!-- Node 3: Redirect -->
+  <g transform="translate(610 50)">
+    <rect x="0" y="0" width="240" height="64" rx="10" fill="#1c2128" stroke="#f85149" stroke-width="1"/>
+    <text x="120" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#f85149">虚假概念判定</text>
+    <text x="120" y="48" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" fill="#e6edf3">追问真实需求</text>
+
+    <!-- Down arrow 3→4 -->
+    <line x1="120" y1="64" x2="120" y2="112" stroke="#30363d" stroke-width="1.5"/>
+    <polygon points="115,108 120,118 125,108" fill="#30363d"/>
+  </g>
+
+  <!-- Node 4: Clarified goal -->
+  <g transform="translate(610 130)">
+    <rect x="0" y="0" width="240" height="64" rx="10" fill="#1c2128" stroke="#30363d" stroke-width="1"/>
+    <text x="120" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#8b949e">用户重新定义</text>
+    <text x="120" y="48" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" fill="#e6edf3">「我想靠自己赚钱」</text>
+
+    <!-- Left arrow 4→5 -->
+    <line x1="0" y1="32" x2="-162" y2="-48" stroke="#58a6ff" stroke-width="1.5" opacity="0.6"/>
+    <polygon points="222,103 232,98 227,108" fill="#58a6ff" opacity="0.6" transform="translate(-450 -150)"/>
+  </g>
+
+  <!-- Node 5: xr-goal -->
+  <g transform="translate(56 186)">
+    <rect x="0" y="0" width="280" height="64" rx="10" fill="#1c2128" stroke="#58a6ff" stroke-width="1.2"/>
+    <text x="140" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#58a6ff">🎯 xr-goal</text>
+    <text x="140" y="48" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" fill="#e6edf3">因果分解 → 条件树 + 优先路径</text>
+
+    <!-- Right arrow 5→6 -->
+    <line x1="280" y1="32" x2="332" y2="32" stroke="#3fb950" stroke-width="1.5" opacity="0.7"/>
+    <polygon points="328,27 338,32 328,37" fill="#3fb950" opacity="0.7"/>
+  </g>
+
+  <!-- Node 6: Executable next step -->
+  <g transform="translate(350 186)">
+    <rect x="0" y="0" width="240" height="64" rx="10" fill="#1c2128" stroke="#3fb950" stroke-width="1.2"/>
+    <text x="120" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#3fb950">可执行的下一步</text>
+    <text x="120" y="48" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" fill="#e6edf3">选方向 → 交易 → 案例</text>
+  </g>
+
+  <!-- Bottom rule: philosophy -->
+  <rect x="56" y="310" width="1088" height="1" fill="#21262d" opacity="0.5"/>
+
+  <g transform="translate(56 330)">
+    <text x="0" y="20" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#484f58">
+      一句话协作逻辑：先判真假（xr-survive-game），再拆路径（xr-goal）
+    </text>
+    <circle cx="14" cy="44" r="3" fill="#30363d"/>
+    <circle cx="28" cy="44" r="3" fill="#30363d"/>
+    <circle cx="42" cy="44" r="3" fill="#30363d"/>
+  </g>
+</svg>

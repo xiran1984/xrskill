@@ -1,24 +1,14 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/platform-Claude%20Code-blueviolet?style=for-the-badge" alt="Claude Code">
-  <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" alt="MIT">
-  <img src="https://img.shields.io/badge/skills-2-orange?style=for-the-badge" alt="2 skills">
-</p>
-
-<h1 align="center">🧭 xrskill</h1>
-
-<p align="center">
-  <em>把模糊的目标和行动卡顿，拆成可执行、可验证的下一步。</em>
-</p>
-
-<p align="center">
-  <strong>xrskill</strong> 是两个 Claude Code 技能的合集：<br>
-  一个通用的<strong>因果分解引擎</strong>，加上一个<strong>生存与繁殖框架</strong>下的意义评估系统。<br>
-  帮你在不确定中做出真实判断并采取行动。
+  <img src="./assets/readme/hero.svg" width="100%" alt="xrskill — 把模糊的目标和行动卡顿，拆成可执行、可验证的下一步">
 </p>
 
 ---
 
 ## 📦 技能概览
+
+<p align="center">
+  <img src="./assets/readme/section-overview.svg" width="100%" alt="技能概览">
+</p>
 
 <table>
   <tr>
@@ -51,73 +41,70 @@
 
 ## 🚀 安装
 
-两个技能通过 Claude Code 的 skills 机制注册。将它们放在 `.claude/skills/` 目录下即可。
-
-### 从 GitHub 安装
+两个技能通过 Claude Code 的 skills 机制注册。
 
 ```bash
+# 从 GitHub 克隆
 git clone https://github.com/xiran1984/xrskill.git ~/.claude/skills/xrskill
+
+# 或者手动复制 xr-goal 和 xr-survive-game 文件夹到 .claude/skills/ 目录
 ```
-
-### 手动安装
-
-将 `xr-goal` 和 `xr-survive-game` 两个文件夹复制到 `.claude/skills/` 目录中。
 
 ---
 
-## 🎯 xr-goal：通用因果分解引擎
+## 🎯 xr-goal · 通用因果分解引擎
+
+<p align="center">
+  <img src="./assets/readme/section-xr-goal.svg" width="100%" alt="xr-goal 通用因果分解引擎">
+</p>
 
 > **核心信念：模糊是执行的唯一敌人。**
 
-大部分目标完不成不是因为能力不够，是因为目标本身没有被写成一个能回答「做完没有」的问题。xr-goal 的工作就是把飘在空中的目标拉到地面上。
+大部分目标完不成不是因为能力不够，是因为目标本身没有被写成一个能回答「做完没有」的问题。
 
-### 🔄 方法论：从目标倒推必要条件
+### 方法论
 
-没有固定模板。目标的类型决定了条件树的结构——不问「这个目标属于哪个分类」，只问「这件事成立需要什么条件」。
+没有固定模板。只问一个问题：**这件事成立需要什么条件为真？**
 
 ```
-定义目标（一句话 + 完成标志）
-    ↓
-倒推直接条件：这件事成立，需要哪些条件为真？
-    ↓
-递归拆解：对每个条件继续追问，直到叶子节点可执行
-    ↓
-标注瓶颈：哪个分支是当前卡点？
-    ↓
-检查遗漏：风险？前提假设？外部依赖？
+定义目标 → 倒推直接条件 → 递归拆解 → 标注瓶颈 → 检查遗漏
 ```
 
-六类条件作为检查清单（只取相关的，不全部套用）：
+六类条件作为检查清单（只取相关的）：
 
 | 类型 | 检查问题 |
 |------|----------|
-| 能力条件 | 需要会什么技能、知识？ |
-| 资源条件 | 需要什么时间、钱、设备？ |
-| 前提条件 | 开始之前什么必须先为真？ |
-| 约束条件 | 不能违反的边界是什么？ |
-| 风险条件 | 什么可能让整个目标归零？ |
-| 复利条件 | 做成之后如何不倒退？ |
+| 能力 | 需要会什么技能、知识？ |
+| 资源 | 需要什么时间、钱、设备？ |
+| 前提 | 开始之前什么必须先为真？ |
+| 约束 | 不能违反的边界是什么？ |
+| 风险 | 什么可能让整个目标归零？ |
+| 复利 | 做成之后如何不倒退？ |
 
-### 🎬 使用示例
+### 使用示例
 
 ```bash
 /xr-goal 我想在3个月内从零开始做一个能赚钱的AI工具产品
 /xr-goal 用 Python 写一个贪吃蛇游戏
-/xr-goal 我如何积累一项不依赖单一雇主的高收入技能
+/xr-goal 我如何建立上台演讲的能力
 ```
 
 每个问题都会得到：**目标定义 → 条件树拆解 → 优先路径 → 验证标准**。
 
-### 🧱 设计原则
+### 设计原则
 
-- 🎯 **树的形状跟着瓶颈走** —— 不为好看而对称，不强制深度一致
-- ✂️ **每层分支都对下一步行动有用** —— 没用就停
-- 🚫 **不把虚假概念当真实目标分解** —— 个人IP、影响力、赛道…
-- ❄️ **冷而直接** —— 不帮用户修饰目标
+- 🎯 **树的形状跟着瓶颈走** — 不为好看而对称，不强制深度一致
+- ✂️ **每层分支都对下一步行动有用** — 没用就停
+- 🚫 **不把虚假概念当真实目标分解** — 个人IP、影响力、赛道…
+- ❄️ **冷而直接** — 不帮用户修饰目标
 
 ---
 
-## 🦅 xr-survive-game：生存与繁殖评估
+## 🦅 xr-survive-game · 生存与繁殖评估
+
+<p align="center">
+  <img src="./assets/readme/section-xr-survive-game.svg" width="100%" alt="xr-survive-game 生存与繁殖评估">
+</p>
 
 > **核心信念：迷茫不是信息不足，是奖励回路在报警。**
 
@@ -125,9 +112,7 @@ git clone https://github.com/xiran1984/xrskill.git ~/.claude/skills/xrskill
 
 ### 🧩 三个模块
 
-#### 🔍 模块一：秒判景观
-
-五道勾选测试，逐条诊断：
+#### 🔍 模块一：秒判景观 — 五道测试
 
 | # | 测试 | 诊断问题 |
 |---|------|----------|
@@ -154,45 +139,25 @@ git clone https://github.com/xiran1984/xrskill.git ~/.claude/skills/xrskill
 
 #### 🧠 模块三：用户画像
 
-每次会话自动读取和更新 `memory/user-profile.md`：
-
-- ✅ 记住反复出现的行为模式
-- ✅ 追踪有效/无效的微动作类型
-- ✅ 记录客观约束（生活状态、作息等）
-- ✅ 所有数据**完全本地存储**，不上传任何外部服务
-
-**越聊越准。**
+每次会话自动读取和更新 `memory/user-profile.md`，所有数据完全本地存储。**越聊越准。**
 
 ---
 
 ## 🤝 两个技能的协作
 
-```
-用户：「我想做一个有影响力的个人 IP」
-              │
-              ▼
-    🦅 xr-survive-game（五道测试）
-              │
-         🔴 红灯：这是一个虚假概念
-              │
-              ▼
-    「你真正需要解决的现实问题是什么？」
-              │
-    用户：「我想靠自己赚钱，不靠工资」
-              │
-              ▼
-    🎯 xr-goal（因果倒推）
-              │
-    拆出：选方向 → 进入真实交易 → 积累案例 → 资产化
-```
+<p align="center">
+  <img src="./assets/readme/section-collaboration.svg" width="100%" alt="两个技能的协作">
+</p>
 
-> **一句话协作逻辑**：先判真假（xr-survive-game），再拆路径（xr-goal）。
+<p align="center">
+  <img src="./assets/readme/workflow-collaboration.svg" width="100%" alt="先判真假，再拆路径">
+</p>
 
 ---
 
 ## 🧬 哲学基础
 
-四个公理来自 xr-survive-game 的生存与繁殖框架，对 xr-goal 的判断也有参考价值：
+四个公理来自 xr-survive-game 的生存与繁殖框架：
 
 | # | 公理 | 推论 |
 |---|------|------|
@@ -205,16 +170,16 @@ git clone https://github.com/xiran1984/xrskill.git ~/.claude/skills/xrskill
 
 ## 🗣️ 说话风格
 
-- ❄️ **冷而直接** —— 不评判，不美化，不替用户脑补答案
-- 🎯 **每句话都做工作** —— 去掉「我觉得」「可能」，直接说结论
-- 🧬 **引用框架但不掉书袋** —— 说「奖励回路断了」不说「根据多巴胺系统理论……」
-- 🚫 **不给鸡汤** —— 不说「加油」「你已经很棒了」
+- ❄️ **冷而直接** — 不评判，不美化，不替用户脑补答案
+- 🎯 **每句话都做工作** — 去掉「我觉得」「可能」，直接说结论
+- 🧬 **引用框架但不掉书袋** — 说「奖励回路断了」不说「根据多巴胺系统理论……」
+- 🚫 **不给鸡汤** — 不说「加油」「你已经很棒了」
 
 ---
 
 ## ⚠️ 免责声明
 
-xr-survive-game 是一个基于生存与繁殖框架的意义评估与行动系统，xr-goal 是一个通用因果分解工具。它们提供的判断和行动建议**不能替代**心理咨询、医疗建议或专业决策建议。
+xr-survive-game 基于生存与繁殖框架提供意义评估与行动建议，xr-goal 是通用因果分解工具。它们的输出不能替代心理咨询、医疗建议或专业决策建议。
 
 如果你有持续的情绪困扰、抑郁症状或焦虑状态，请寻求专业帮助。
 

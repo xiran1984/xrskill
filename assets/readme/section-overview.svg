@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="130" viewBox="0 0 1200 130"
+     role="img" aria-labelledby="sec1-title sec1-desc">
+  <title id="sec1-title">技能概览</title>
+  <desc id="sec1-desc">Section divider: two-skill overview — xr-goal and xr-survive-game</desc>
+
+  <rect width="1200" height="130" rx="16" fill="#161b22"/>
+
+  <!-- Accent dot -->
+  <circle cx="56" cy="65" r="5" fill="#58a6ff"/>
+
+  <!-- Section number -->
+  <text x="80" y="74" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" fill="#484f58" letter-spacing="2">01</text>
+
+  <!-- Section title -->
+  <text x="124" y="74" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="30" font-weight="600" fill="#e6edf3">技能概览</text>
+
+  <!-- Subtle rule below -->
+  <rect x="56" y="102" width="1088" height="1" fill="#21262d" opacity="0.5"/>
+</svg>
