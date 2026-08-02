@@ -1,142 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="1200" height="380" viewBox="0 0 1200 380"
-     role="img" aria-labelledby="hero-title hero-desc">
-  <title id="hero-title">xrskill — 把任何目标拆成条件树，卡住时直接给可执行的下一步</title>
-  <desc id="hero-desc">Two agent skills: xr-goal decomposes any goal into a causal condition tree with a priority path; xr-survive-game scans for false concepts with five tests and gives 5-minute micro-actions when stuck.</desc>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+  <title id="title">xrskill — 判断目标、解除卡点、拆出下一步</title>
+  <desc id="desc">三个 Agent Skills 分别提供目标拆解、行动导航和心理卡点支持。</desc>
   <defs>
-    <linearGradient id="topRule" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#58a6ff" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="goalPanelBg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#161b22"/>
-      <stop offset="100%" stop-color="#0d1117"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111827"/>
     </linearGradient>
   </defs>
+  <rect width="1200" height="400" rx="28" fill="url(#bg)"/>
+  <path d="M0 322 C220 260 350 375 570 315 S910 245 1200 315 V400 H0Z" fill="#0f1b2d"/>
 
-  <rect width="1200" height="380" rx="20" fill="#0d1117"/>
-  <rect x="56" y="0" width="1088" height="1" fill="url(#topRule)" opacity="0.4"/>
+  <g transform="translate(60 50)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif">
+    <text x="0" y="24" font-size="18" fill="#7dd3fc" letter-spacing="2">AGENT SKILLS · ACTION RECOVERY SYSTEM</text>
+    <text x="0" y="100" font-size="70" font-weight="750" fill="#f8fafc">xrskill</text>
+    <text x="0" y="147" font-size="25" fill="#cbd5e1">判断目标，解除卡点，拆出下一步</text>
+    <text x="0" y="190" font-size="20" fill="#94a3b8">目标、方向和心理阻力，需要不同的行动工具。</text>
 
-  <!-- ===== LEFT: Title block ===== -->
-  <g id="title-block" transform="translate(56 48)">
-    <!-- Tagline instead of platform label -->
-    <text x="0" y="26" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="15" fill="#8b949e">
-      任何 Agent 都能用的目标分解与行动系统
-    </text>
-
-    <!-- Project name -->
-    <text x="0" y="76" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="64" font-weight="700" fill="#e6edf3" letter-spacing="-1">xrskill</text>
-
-    <!-- Concrete description -->
-    <text x="0" y="120" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="20" fill="#8b949e">
-      把模糊目标拆成条件树，找到瓶颈，走最短可验证路径
-    </text>
-
-    <!-- Trigger badges -->
-    <g transform="translate(0 160)">
-      <rect x="0" y="0" width="148" height="34" rx="8" fill="#1c2128" stroke="#30363d" stroke-width="1"/>
-      <text x="74" y="22" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" fill="#58a6ff">/xr-goal</text>
-
-      <rect x="160" y="0" width="220" height="34" rx="8" fill="#1c2128" stroke="#30363d" stroke-width="1"/>
-      <text x="270" y="22" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" fill="#58a6ff">/xr-survive-game</text>
+    <g transform="translate(0 232)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="18">
+      <rect width="220" height="46" rx="10" fill="#172554" stroke="#60a5fa"/>
+      <text x="110" y="30" text-anchor="middle" fill="#bfdbfe">/xr-trauma-support</text>
+      <rect x="236" width="220" height="46" rx="10" fill="#12302d" stroke="#34d399"/>
+      <text x="346" y="30" text-anchor="middle" fill="#a7f3d0">/xr-survive-game</text>
+      <rect x="472" width="150" height="46" rx="10" fill="#3b2611" stroke="#fbbf24"/>
+      <text x="547" y="30" text-anchor="middle" fill="#fde68a">/xr-goal</text>
     </g>
-
-    <!-- Pairing hint -->
-    <text x="0" y="224" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#484f58">
-      先判真假，再拆路径 — 两个技能可以接力使用
-    </text>
   </g>
 
-  <!-- ===== RIGHT: Two-panel proof ===== -->
-  <g id="project-proof" transform="translate(610 44)">
-
-    <!-- Panel 1: xr-goal — condition tree -->
+  <g transform="translate(760 55)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif">
+    <path d="M38 45 V275" stroke="#334155" stroke-width="3"/>
     <g transform="translate(0 0)">
-      <!-- Panel label -->
-      <text x="0" y="16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#58a6ff">🎯 xr-goal</text>
-      <text x="84" y="16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#484f58">条件树分解</text>
-
-      <!-- Tree: root -->
-      <rect x="0" y="30" width="160" height="32" rx="6" fill="#1c2128" stroke="#30363d" stroke-width="1"/>
-      <text x="80" y="51" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#e6edf3">Goal</text>
-
-      <!-- Branch lines -->
-      <line x1="80" y1="62" x2="80" y2="74" stroke="#30363d" stroke-width="1.2"/>
-      <line x1="30" y1="74" x2="130" y2="74" stroke="#30363d" stroke-width="1.2"/>
-      <line x1="30" y1="74" x2="30" y2="86" stroke="#30363d" stroke-width="1"/>
-      <line x1="80" y1="74" x2="80" y2="86" stroke="#58a6ff" stroke-width="1.2"/>
-      <line x1="130" y1="74" x2="130" y2="86" stroke="#30363d" stroke-width="1"/>
-
-      <!-- Level 2 nodes -->
-      <rect x="2" y="86" width="56" height="26" rx="5" fill="#0d1117" stroke="#30363d" stroke-width="0.8"/>
-      <text x="30" y="104" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8b949e">Task 1</text>
-
-      <rect x="50" y="86" width="60" height="26" rx="5" fill="#0d1117" stroke="#58a6ff" stroke-width="1"/>
-      <text x="80" y="104" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#58a6ff">Task 2 ⚠</text>
-
-      <rect x="100" y="86" width="60" height="26" rx="5" fill="#0d1117" stroke="#30363d" stroke-width="0.8"/>
-      <text x="130" y="104" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8b949e">Task 3</text>
-
-      <!-- Deep branch on bottleneck -->
-      <line x1="80" y1="112" x2="80" y2="120" stroke="#58a6ff" stroke-width="0.8" opacity="0.6"/>
-      <line x1="60" y1="120" x2="100" y2="120" stroke="#58a6ff" stroke-width="0.8" opacity="0.4"/>
-      <line x1="60" y1="120" x2="60" y2="128" stroke="#58a6ff" stroke-width="0.8" opacity="0.4"/>
-      <line x1="100" y1="120" x2="100" y2="128" stroke="#58a6ff" stroke-width="0.8" opacity="0.4"/>
-
-      <rect x="44" y="128" width="32" height="22" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="0.5"/>
-      <text x="60" y="143" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#484f58">2a</text>
-      <rect x="82" y="128" width="36" height="22" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="0.5"/>
-      <text x="100" y="143" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#484f58">2b</text>
-
-      <!-- Priority path below tree -->
-      <text x="0" y="174" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#484f58">
-        优先路径：瓶颈 Task 2 先深挖，辅助分支早停
-      </text>
+      <circle cx="38" cy="45" r="17" fill="#172554" stroke="#60a5fa" stroke-width="3"/>
+      <rect x="78" y="12" width="290" height="68" rx="14" fill="#111c32" stroke="#334155"/>
+      <text x="101" y="39" font-size="21" font-weight="650" fill="#bfdbfe">心理支持</text>
+      <text x="101" y="64" font-size="18" fill="#94a3b8">看见恐惧与旧信念</text>
     </g>
-
-    <!-- Divider between panels -->
-    <line x1="0" y1="188" x2="560" y2="188" stroke="#21262d" stroke-width="1"/>
-
-    <!-- Panel 2: xr-survive-game — five tests + micro-actions -->
-    <g transform="translate(0 202)">
-      <text x="0" y="16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#58a6ff">🦅 xr-survive-game</text>
-      <text x="120" y="16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#484f58">秒判景观 + 即刻导航</text>
-
-      <!-- Five test strip -->
-      <g transform="translate(0 28)">
-        <rect x="0" y="0" width="72" height="28" rx="5" fill="#0d1117" stroke="#3fb950" stroke-width="0.8"/>
-        <text x="36" y="19" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#3fb950">投影 ✅</text>
-
-        <rect x="80" y="0" width="88" height="28" rx="5" fill="#0d1117" stroke="#f85149" stroke-width="0.8"/>
-        <text x="124" y="19" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#f85149">手段-目的 🔴</text>
-
-        <rect x="176" y="0" width="72" height="28" rx="5" fill="#0d1117" stroke="#f85149" stroke-width="0.8"/>
-        <text x="212" y="19" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#f85149">信息差 🔴</text>
-
-        <rect x="256" y="0" width="72" height="28" rx="5" fill="#0d1117" stroke="#f85149" stroke-width="0.8"/>
-        <text x="292" y="19" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#f85149">奖励 🔴</text>
-
-        <rect x="336" y="0" width="72" height="28" rx="5" fill="#0d1117" stroke="#f85149" stroke-width="0.8"/>
-        <text x="372" y="19" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#f85149">替代性 🔴</text>
-      </g>
-
-      <!-- Verdict -->
-      <g transform="translate(0 68)">
-        <rect x="0" y="0" width="420" height="24" rx="5" fill="#1c2128" stroke="#f85149" stroke-width="0.5"/>
-        <text x="210" y="16" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#f85149">
-          🔴 红灯 — 虚假概念。追问真实需求，不继续拆假目标。
-        </text>
-      </g>
-
-      <!-- Micro-action hint -->
-      <g transform="translate(0 104)">
-        <rect x="0" y="0" width="420" height="24" rx="5" fill="#1c2128" stroke="#30363d" stroke-width="0.5"/>
-        <text x="210" y="16" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8b949e">
-          ⚡ 即刻导航：不问问题 → 5分钟微动作 → 身体熵减 / 环境熵减 / 奖励回路激活
-        </text>
-      </g>
+    <g transform="translate(0 100)">
+      <circle cx="38" cy="45" r="17" fill="#12302d" stroke="#34d399" stroke-width="3"/>
+      <rect x="78" y="12" width="290" height="68" rx="14" fill="#10231f" stroke="#334155"/>
+      <text x="101" y="39" font-size="21" font-weight="650" fill="#a7f3d0">行动导航</text>
+      <text x="101" y="64" font-size="18" fill="#94a3b8">判断价值，恢复启动</text>
+    </g>
+    <g transform="translate(0 200)">
+      <circle cx="38" cy="45" r="17" fill="#3b2611" stroke="#fbbf24" stroke-width="3"/>
+      <rect x="78" y="12" width="290" height="68" rx="14" fill="#2b1d0f" stroke="#334155"/>
+      <text x="101" y="39" font-size="21" font-weight="650" fill="#fde68a">目标拆解</text>
+      <text x="101" y="64" font-size="18" fill="#94a3b8">条件树、瓶颈、验证</text>
     </g>
   </g>
 </svg>
