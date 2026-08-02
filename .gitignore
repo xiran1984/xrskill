@@ -2,3 +2,9 @@
 node_modules/
 .DS_Store
 **/.git/
+
+# Local sensitive data created by xr-trauma-support; never publish it.
+xr-trauma-support/private/user-patterns.md
+
+# Local user profile and behavioral memory; never publish it.
+xr-survive-game/memory/

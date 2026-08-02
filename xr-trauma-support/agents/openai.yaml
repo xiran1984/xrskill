@@ -1,0 +1,4 @@
+interface:
+  display_name: "创伤初筛与自助支持"
+  short_description: "识别创伤、看见内心、承接情绪并生成安全恢复路径"
+  default_prompt: "Use $xr-trauma-support to identify a possible trauma pattern, understand the inner conflict with care, and build a safe recovery plan with $xr-goal."
