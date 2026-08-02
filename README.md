@@ -23,19 +23,7 @@
 
 ## 怎么安装
 
-需要 Node.js 22.20 或更高版本。为 Codex 全局安装全部 Skills：
-
-```bash
-npx skills@latest add xiran1984/xrskill --skill '*' --agent codex --global --yes --copy
-```
-
-只安装一个 Skill：
-
-```bash
-npx skills@latest add xiran1984/xrskill --skill xr-goal --agent codex --global --yes --copy
-```
-
-安装后重新开启 Codex 会话。输入 `/`，应能看到三个斜杠命令。
+下载这些 Skills：[xiran1984/xrskill](https://github.com/xiran1984/xrskill)
 
 ## 怎么用
 
